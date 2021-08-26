@@ -1,0 +1,19 @@
+def col(n):
+    maxit = 1
+    j = 1
+    for i in range(2, n+1):
+        it = 0
+        m = i
+        while m != 1:
+            if m % 2 == 0:
+                m = int(m / 2)
+                it += 1
+            else:
+                m = int(3 * m + 1)
+                it += 1
+        a = it
+        if a>maxit:
+            maxit=a
+            j = i
+    return j, maxit
+print(col(int(input()))
